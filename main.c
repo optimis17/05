@@ -5,14 +5,27 @@
 
 int main(int argc, char *argv[]) {
 	
-	int sum=0;
-	int i, num;
+	int answer=59;	
+	int num, try;
+	do
+	{
+		printf("guess the number : ");
+		scanf("%i",&num);
+		if(num<answer){
+		
+			printf("high!\n");
+			try++;
+			}
+		else if(num==answer)
+			try++;
+		else{
+			printf("low!\n");
+			try++;
+			}
+		
+	}while(num!=answer);
 	
-	printf("input a number : ");
-	scanf("%i",&num);
-	for(i=1;i<=num;i++)
-		sum+=i;
+	printf("congratulation! trials: %i",try);
 	
-	printf("the result is %i\n",sum);	
 	return 0;
 }
