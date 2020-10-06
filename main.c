@@ -5,15 +5,19 @@
 
 int main(int argc, char *argv[]) {
 	
-	int num;
-	printf("input the number: ");
-	scanf("%i",&num);
+	int num=0;
+	char c;
 	
-	if(num>0)
-		printf("%i 입니다.\n",num);
-	else if(num<0)
-		printf("%i 입니다.\n",-num);
-	else
-		printf("0입니다.\n");
+	printf("input a string:");
+	while( (c=getchar()) !='\n')
+	{
+		if(c>='0'&&c<='9')
+		{
+			num=num+1;
+		}
+	}		
+	
+	
+	printf("the number of digits is %i",num);	
 	return 0;
 }
